@@ -1,4 +1,4 @@
-# SpaceWalk (copy of private repo)
+This is a copy of the private SpaceWalk Repo!
 
 Debug elements:
 - Clicking on the number next to "steps today" on the home page will increment steps. This was for testing without a phone.
