@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    android:id="@+id/constraintLayoutParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="132dp"
+        android:layout_marginStart="32dp"
+        android:contentDescription="@string/image"
+        app:layout_constraintBottom_toBottomOf="@+id/planet"
+        app:layout_constraintEnd_toStartOf="@+id/planet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/planet"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/ship"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:rotationY="180"
+        android:contentDescription="@string/image"
+        android:src="@drawable/ship"
+        app:layout_constraintBottom_toBottomOf="@+id/planet"
+        app:layout_constraintEnd_toEndOf="@+id/line"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/line"
+        app:layout_constraintTop_toTopOf="@+id/planet" />
+
+    <ImageView
+        android:id="@+id/planet"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="32dp"
+        android:rotationY="180"
+        android:contentDescription="@string/image"
+        android:src="@drawable/planet"
+        app:layout_constraintBottom_toTopOf="@+id/totalPlanets"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/line"
+        app:layout_constraintTop_toBottomOf="@+id/progressPercent" />
+
+    <TextView
+        android:id="@+id/progressPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/planet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/totalPlanets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_planets"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/totalPlanetsCount"
+        app:layout_constraintEnd_toStartOf="@+id/totalPlanetsCount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/totalPlanetsCount" />
+
+    <TextView
+        android:id="@+id/nextPlanet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next_planet"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nextPlanetCount"
+        app:layout_constraintEnd_toStartOf="@+id/nextPlanetCount"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/totalPlanets"
+        app:layout_constraintTop_toTopOf="@+id/nextPlanetCount" />
+
+    <Button
+        android:id="@+id/totalPlanetsCount"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:backgroundTint="@color/blue"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/nextPlanetCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/totalPlanets"
+        app:layout_constraintTop_toBottomOf="@+id/planet" />
+
+    <Button
+        android:id="@+id/nextPlanetCount"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:backgroundTint="@color/blue"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/totalPlanetsCount"
+        app:layout_constraintStart_toStartOf="@+id/totalPlanetsCount"
+        app:layout_constraintTop_toTopOf="@+id/totalPlanetsCount" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

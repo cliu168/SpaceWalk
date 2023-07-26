@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/planet"
+        android:alpha="0.6"
+        android:layout_width="370dp"
+        android:layout_height="300dp"
+        android:contentDescription="@string/image"
+        android:src="@drawable/planet"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/storyBlock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ship"
+        android:layout_width="370dp"
+        android:layout_height="300dp"
+        android:contentDescription="@string/image"
+        android:src="@drawable/ship"
+        app:layout_constraintBottom_toTopOf="@id/storyBlock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/powerBlock"
+        android:layout_width="378dp"
+        android:layout_height="103dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:onClick="goToPower"
+        android:contentDescription="@string/power"
+        android:src="@drawable/long_block"
+        app:layout_constraintBottom_toTopOf="@id/progressBlock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/storyBlock"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <ImageView
+        android:id="@+id/progressBlock"
+        android:layout_width="378dp"
+        android:layout_height="103dp"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        android:onClick="goToProgress"
+        android:contentDescription="@string/progress"
+        android:src="@drawable/long_block"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/powerBlock"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <ImageView
+        android:id="@+id/storyBlock"
+        android:layout_width="86dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:contentDescription="@string/story"
+        android:onClick="goToStory"
+        android:src="@drawable/block"
+        app:layout_constraintBottom_toTopOf="@id/powerBlock"
+        app:layout_constraintEnd_toStartOf="@id/statsBlock"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/powerBlock"
+        app:layout_constraintTop_toBottomOf="@id/ship"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <ImageView
+        android:id="@+id/statsBlock"
+        android:layout_width="86dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:contentDescription="@string/stats"
+        android:onClick="goToStats"
+        android:src="@drawable/block"
+        app:layout_constraintBottom_toTopOf="@id/powerBlock"
+        app:layout_constraintEnd_toEndOf="@id/powerBlock"
+        app:layout_constraintTop_toBottomOf="@id/ship"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <ImageView
+        android:id="@+id/storyIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="2dp"
+        android:contentDescription="@string/story"
+        android:src="@drawable/baseline_menu_book_24"
+        app:layout_constraintBottom_toBottomOf="@+id/storyBlock"
+        app:layout_constraintEnd_toEndOf="@+id/storyBlock"
+        app:layout_constraintStart_toStartOf="@+id/storyBlock"
+        app:layout_constraintTop_toTopOf="@+id/storyBlock" />
+
+    <ImageView
+        android:id="@+id/notification"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="5dp"
+        android:contentDescription="@string/story"
+        android:src="@drawable/notification"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/storyBlock"
+        app:layout_constraintEnd_toEndOf="@+id/storyBlock"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/storyBlock"
+        app:layout_constraintTop_toTopOf="@+id/storyBlock"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <ImageView
+        android:id="@+id/statsIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/stats"
+        android:src="@drawable/baseline_bar_chart_24"
+        app:layout_constraintBottom_toBottomOf="@+id/statsBlock"
+        app:layout_constraintEnd_toEndOf="@+id/statsBlock"
+        app:layout_constraintStart_toStartOf="@+id/statsBlock"
+        app:layout_constraintTop_toTopOf="@+id/statsBlock" />
+
+    <TextView
+        android:id="@+id/powerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/power"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/powerBlock"
+        app:layout_constraintEnd_toEndOf="@id/powerBlock"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/powerBlock"
+        app:layout_constraintTop_toTopOf="@id/powerBlock"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/progressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/progress"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBlock"
+        app:layout_constraintEnd_toEndOf="@id/progressBlock"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/progressBlock"
+        app:layout_constraintTop_toTopOf="@id/progressBlock"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/powerPercentHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/powerBlock"
+        app:layout_constraintEnd_toEndOf="@id/powerBlock"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/powerBlock"
+        app:layout_constraintTop_toTopOf="@id/powerBlock" />
+
+    <TextView
+        android:id="@+id/progressPercentHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBlock"
+        app:layout_constraintEnd_toEndOf="@id/progressBlock"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/progressBlock"
+        app:layout_constraintTop_toTopOf="@id/progressBlock" />
+
+    <TextView
+        android:id="@+id/debugText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/steps"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/powerBlock"
+        app:layout_constraintEnd_toStartOf="@id/storyBlock"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/powerBlock"
+        app:layout_constraintTop_toBottomOf="@id/ship" />
+
+    <TextView
+        android:id="@+id/debugSteps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:onClick="incSteps"
+        android:text="@string/zero"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/powerBlock"
+        app:layout_constraintEnd_toStartOf="@id/storyBlock"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/debugText"
+        app:layout_constraintTop_toBottomOf="@id/ship"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ProgressBar
+        android:id="@+id/powerBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:progress="0"
+        android:max = "100"
+        app:layout_constraintBottom_toBottomOf="@id/powerPercentHome"
+        app:layout_constraintEnd_toStartOf="@id/powerPercentHome"
+        app:layout_constraintStart_toStartOf="@id/powerText"
+        app:layout_constraintTop_toBottomOf="@id/powerText" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:progress="0"
+        android:max = "100"
+        app:layout_constraintBottom_toBottomOf="@id/progressPercentHome"
+        app:layout_constraintEnd_toStartOf="@id/progressPercentHome"
+        app:layout_constraintStart_toStartOf="@id/progressText"
+        app:layout_constraintTop_toBottomOf="@id/progressText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

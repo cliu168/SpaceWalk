@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/batteryBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:progress="0"
+        app:layout_constraintBottom_toBottomOf="@id/battery"
+        app:layout_constraintEnd_toEndOf="@id/battery"
+        app:layout_constraintStart_toStartOf="@id/battery"
+        app:layout_constraintTop_toTopOf="@id/battery" />
+
+    <ImageView
+        android:id="@+id/battery"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/image"
+        android:src="@drawable/battery"
+        app:layout_constraintBottom_toTopOf="@+id/dailyGoal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/powerPercent"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/powerPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/battery"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dailyGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/daily_goal_progress"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/dailyGoalCount"
+        app:layout_constraintEnd_toStartOf="@+id/dailyGoalCount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dailyGoalCount" />
+
+    <TextView
+        android:id="@+id/percentChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/percent_change"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/percentChangeCount"
+        app:layout_constraintEnd_toStartOf="@+id/percentChangeCount"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/dailyGoal"
+        app:layout_constraintTop_toTopOf="@+id/percentChangeCount" />
+
+    <Button
+        android:id="@+id/dailyGoalCount"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:backgroundTint="@color/blue"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/percentChangeCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dailyGoal"
+        app:layout_constraintTop_toBottomOf="@+id/battery"
+        app:layout_constraintVertical_bias="0.37" />
+
+    <Button
+        android:id="@+id/editStepGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="editGoal"
+        android:text="@string/edit_goal"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:backgroundTint="@color/orange"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/dailyGoalCount"
+        app:layout_constraintStart_toStartOf="@+id/dailyGoalCount"
+        app:layout_constraintTop_toBottomOf="@+id/dailyGoalCount" />
+
+    <Button
+        android:id="@+id/percentChangeCount"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:clickable="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:backgroundTint="@color/blue"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/dailyGoalCount"
+        app:layout_constraintStart_toStartOf="@+id/dailyGoalCount"
+        app:layout_constraintTop_toBottomOf="@+id/editStepGoal" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

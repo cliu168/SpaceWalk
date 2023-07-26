@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">SpaceWalk</string>
+    <string name="power">Power</string>
+    <string name="progress">Progress</string>
+    <string name="story">Story Gallery</string>
+    <string name="stats">Statistics</string>
+    <string name="steps">Steps Today:</string>
+    <string name="daily_goal_progress">Daily Goal Progress:</string>
+    <string name="percent_change">Percent Change:</string>
+    <string name="total_planets">Total Planets Visited:</string>
+    <string name="next_planet">Days until Next Planet:</string>
+    <string name="image">Image</string>
+    <string name="daily_goal">Daily Step Goal:</string>
+    <string name="enter">Enter Number</string>
+    <string name="ok">OK</string>
+    <string name="edit_goal">EDIT GOAL</string>
+    <string name="zero">0</string>
+    <string name="large_text">Test</string>
+    <string name="chap_1">Chapter 1: We Are Saved</string>
+    <string name="chap_2">Chapter 2: A New Planet</string>
+    <string name="tbd">To Be Continued…</string>
+    <string name="total_steps">Total Steps:</string>
+</resources>
