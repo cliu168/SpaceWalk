@@ -1,5 +1,4 @@
-# Team-G-SpaceWalk
-Team G Repo
+# SpaceWalk
 
 Debug elements:
 - Clicking on the number next to "steps today" on the home page will increment steps. This was for testing without a phone.
@@ -13,4 +12,3 @@ Completion:
 + Adjustable daily step goal on Power page.
 + Scrollable comics for Story Page.
 + Bar graph with daily statistics and ability to share on Stats page.
-- Did not implement database as SharedPreferences were able to do all we desired.
